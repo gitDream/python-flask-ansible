@@ -1,0 +1,5 @@
+data={
+    "SQLALCHEMY_DATABASE_URI":'mysql+pymysql://chen:CHen@237356573@192.168.85.23:3306/myhost',
+    "SQLALCHEMY_TRACK_MODIFICATIONS":"False",
+    "SECRET_KEY":"6LeYIbsSAAAAACRPIllxA7wvXjIE411PfdB2gt2J",
+}

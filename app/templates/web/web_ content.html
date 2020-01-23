@@ -1,0 +1,28 @@
+{% extends 'base/web_base/base.html' %}
+{% block My_tites %}
+    <div class="container">
+    <div class="panel panel-default">
+
+        <!-- tites 标题-->
+        {% include 'base/web_base/tites.html' %}
+
+        <!--  roles files push 文件上传模态框-->
+        {% include 'base/roles_push_files.html' %}
+
+        <!--  add host 添加主机编辑框-->
+        {% include 'base/wtf_add_host.html' %}
+
+        <!-- all task  批量操作任务区 -->
+        {% include 'base/ansibl_task.html' %}
+
+        <!-- add host button tables group   table区操作列表按钮组 -->
+        {% include 'base/edit_button_group.html' %}
+
+        <!-- tables 主机列表-->
+        <div class="panel panel-default panel-body">
+
+        <table id="goods_table" class="table table-hover"></table>
+        </div>
+    </div>
+
+{% endblock %}

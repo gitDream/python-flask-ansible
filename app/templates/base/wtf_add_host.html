@@ -1,0 +1,53 @@
+<!--添加主机 Host-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加主机</h4>
+                <div class="modal-body">
+                    <form class="form form-horizontal" method="post" role="form" action="/addhost">
+                        {{ form.csrf_token }}
+                        {{ form.hostname.label(for="txt_departmentname") }}
+                        <br>
+                        {{ form.hostname( class="form-control"  ,placeholder="如：fjgh_01") }}
+                        <br>
+                        {{ form.ip.label(for="txt_departmentname",class="display-4") }}
+                        <br>
+                        {{ form.ip( class="form-control"  ,placeholder="如：10.10.10.1") }}
+                        <br>
+                        {{ form.port.label(for="txt_departmentname") }}
+                        <br>
+                        {{ form.port(class="form-control",placeholder="如：22") }}
+                        <br>
+                        {{ form.user.label(for="txt_departmentname",class="display-4") }}
+                        <br>
+                        {{ form.user( class="form-control" ,placeholder="如：root") }}
+                        <br>
+                        {{ form.passwd.label(for="txt_departmentname") }}
+                        <br>
+                        {{ form.passwd(class="form-control"  ,placeholder="如：237356573") }}
+                        <br>
+
+                        {{ form.systemtype.label(for="txt_departmentname") }}
+
+                        <br>
+
+                        {{ form.systemtype(class="form-control m-b-sm" , style="width: auto" ,placeholder="选：Redhat | Centos") }}
+
+                        <br>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
+                                    class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+                            </button>
+                                    {{ form.submit( class="btn btn-primary btn-large") }}
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
